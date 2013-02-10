@@ -4,7 +4,7 @@
 #
 # Copyright 2011, ccat
 
-default[:mediawiki][:directory] = "/var/www/mediawiki"
+default[:mediawiki][:directory] = "/srv/www/mediawiki"
 
 default[:mediawiki][:wgSitename] = "mediawiki"
 default[:mediawiki][:wgMetaNamespace] = "Mediawiki" # Link to wgSitename
@@ -45,7 +45,7 @@ default[:mediawiki][:wgDiff3] = "/usr/bin/diff3"
 default[:mediawiki][:wgResourceLoaderMaxQueryLength] = "-1"
 
 default[:mediawiki][:dbAdminUser] = "admin"
-#default[:mediawiki][:installdbPass] = node[:mysql][:server_root_password]
+default[:mediawiki][:installdbPass] = node[:mysql][:server_root_password]
 default[:mediawiki][:installdbPass] = ""
 default[:mediawiki][:dbAdminPass] = ""
 
@@ -58,4 +58,3 @@ default[:mediawiki][:backup_frequency] ="weekly"
 default[:mediawiki][:access2config_folder] = "false"
 
 default[:mediawiki][:userLocalSettings] = [""]
-
